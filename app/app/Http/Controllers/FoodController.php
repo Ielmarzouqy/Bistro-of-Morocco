@@ -53,9 +53,9 @@ class FoodController extends Controller
 
         ]);
         $food = new Food();
-        $food->name = $request->input('name');
-        $food->cover = $request->input('cover');
-        $food->price = $request->input('price');
+        $food->name = strip_tags ( $request->input('name'));
+        $food->cover =strip_tags ($request->input('cover'));
+        $food->price =strip_tags ($request->input('price'));
         $food->save();
         return redirect()->route('foods.index');
     }
@@ -92,9 +92,21 @@ class FoodController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id){
         
+    $request->validate([
+        'name'=>'required',
+        'cover'=>'required',
+        'price'=>['required','integer'],
+    ]);
+
+        $update=Food::findOrFail($id);
+        $update->name= $request->input('name');
+        $update->cover= $request->input('cover');
+        $update->price= $request->input('price');
+
+        $update->save();
+        return redirect()->route('foods.show', $id);
     }
 
     /**
