@@ -9,7 +9,7 @@
 
                 <div class="p-2 gap-4 m-2 text-decoration-none">
                     <a class="p-2 gap-4 m-2" href="{{route('foods.index')}}">Foods</a>
-                    <a class="p-2 gap-4 m-2" href="#">Add Food</a>
+                    <a class="p-2 gap-4 m-2" href="{{route('foods.create')}}">Add Food</a>
                     <a class="p-2 gap-4 m-2" href="#">Edit Food</a>
                 </div>
                 <div class="card-header">{{ __('Dashboard') }}</div>

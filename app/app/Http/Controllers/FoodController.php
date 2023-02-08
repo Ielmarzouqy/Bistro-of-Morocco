@@ -44,6 +44,14 @@ class FoodController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){
+
+
+        $request->validate([
+            'name'=>'required',
+            'cover'=>'required',
+            'price'=>['required','integer'],
+
+        ]);
         $food = new Food();
         $food->name = $request->input('name');
         $food->cover = $request->input('cover');
@@ -70,9 +78,11 @@ class FoodController extends Controller
      * @param  int  $id  
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit($id){
+        return view('foods.edit',[
+            'food'=>Food::findOrFail($id)
+
+        ]);
     }
 
     /**
@@ -84,7 +94,7 @@ class FoodController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

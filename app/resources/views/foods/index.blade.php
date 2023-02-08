@@ -20,13 +20,20 @@
                                 <li class="m-4 p-3">
                                 {{$food['name']}} <br>
                                 <span class="btn btn-info">{{$food['price']}} dh</span> 
+                                <div>
+                                    <a href="{{route('foods.edit',$food->id)}}">
+                                        <button class="btn btn-warning">Edit </button>
+                                    </a>
+                                </div>
                                 </li> 
+                                
                          </a>
                         @endforeach
                     </ul>
                  @else
                         <p>there are no foods to display</p>
                  @endif
+                
                 </div>
             </div>
         </div>
