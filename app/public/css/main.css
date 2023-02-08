@@ -1,3 +1,14 @@
-body{
-    background-color:rgb(222, 79, 79) ;
+/* #8A3D4B */
+/* #DCA6B5 */
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.bg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100vh;
+
 }

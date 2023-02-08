@@ -17,6 +17,13 @@
                     </strong>
                  </h1>
                 </div>
+                <div>
+                    <form action="{{route('foods.destroy', $food->id)}}" method="GET">
+                        @csrf
+                        {{-- @method('DELETE') --}}
+                        <button class="btn btn-danger">Delete </button>
+                    </form>
+                </div>
                
             </div>
         </div>
