@@ -4,39 +4,34 @@
     <link rel="stylesheet" href="css/style.css">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-
-                <div class="p-2 gap-4 m-2 text-decoration-none">
-                  All foods
-                </div>
-                <div class="card-header"></div>
-
-                <div class="card-body">
-                 @if (count($foods) > 0)
-                    <ul class="">
-                        @foreach ($foods as $food)
-                         <a href="{{route('foods.show',['food'=>$food['id']])}}">
-                                <li class="m-4 p-3">
-                                {{$food['name']}} <br>
-                                <span class="btn btn-info">{{$food['price']}} dh</span> 
-                                <div>
-                                    <a href="{{route('foods.edit',$food->id)}}">
-                                        <button class="btn btn-warning">Edit </button>
-                                    </a>
+        <div class="foods col-md-12">
+                All foods
+                @if (count($foods) > 0)
+                <div class="mb-3 " style="max-width: 540px;">
+                    @foreach ($foods as $food)
+                        <a href="{{route('foods.show',['food'=>$food['id']])}}">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/image/{{$food['cover']}}"   class="img-fluid rounded-start" >
                                 </div>
-                               
-                                </li> 
-                                
-                         </a>
-                        
-                        @endforeach
-                    </ul>
-                 @else
-                        <p>there are no foods to display</p>
-                 @endif
-                
-                </div>
+                                <div class="col-md-6 d-flex">
+                                    <div class="card-body">
+                                    <h5 class="card-title">{{$food['name']}}</h5>
+                                    <p class="card-text "><small class=" price text-muted">{{$food['price']}} dh</small></p>
+                                    <div>
+                                        <a href="{{route('foods.edit',$food->id)}}">
+                                            <button class="btn btn-edit">Edit </button>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    @endforeach
+                  </div>
+                  @else
+                  <p>there are no foods to display</p>
+           @endif
             </div>
         </div>
     </div>

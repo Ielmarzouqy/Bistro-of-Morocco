@@ -16,22 +16,22 @@
             </div>
         </div>
         <div class="p-4 ml-4">
-            <form action="{{route('foods.update', ['food'=>$food->id])}}" method="post" class="border bg-white" >
+            <form action="{{route('foods.update', ['food'=>$food->id])}}" method="post" enctype="multipart/form-data" class="border bg-white" >
                 @csrf
                 @method('PUT')
                 <div>
                     <input type="text" name="name" value="{{$food->name}}" placeholder="Name of Food">
                    
                 </div>
-                {{-- <div class="mb-3">
+                <div class="mb-3">
                     <label for="formFile" class="form-label"></label>
-                    <input class="form-control" name="cover" type="file" id="formFile">
-                </div> --}}
-                <div>
+                    <input class="form-control" name="cover"  type="file" id="formFile">
+                </div>
+                {{-- <div>
                     <input type="text" name="cover" value="{{$food->cover}}" placeholder="image">
                         
                        
-                </div>
+                </div> --}}
                 <div>
                     <input type="text" name="price" value="{{$food->price}}" placeholder="Price">   
                              

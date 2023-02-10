@@ -1,14 +1,57 @@
 /* #8A3D4B */
 /* #DCA6B5 */
-*{
-    margin: 0;
-    padding: 0;
+/* #F9D1AC */
+/* .left-bg{
+  width: 50%;
+  height: 50%;
+  margin-left: 0;
+}
+.right-bg{
+  width: 50%;
+  height: 50ù;
+  /* margin-right: 0; */
+/* } */ 
+.banner{
+  background-image: url(../images/left-bg.png);
+  width: 500px;
+  height: 500px;
+}
+.right-banner{
+  background-image: url(../images/right-bg.png);
+  width: 500px;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+}
+h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+span{
+  color: #F9D1AC;
+}
+.description{
+  margin-top: 80px;
+  margin-left: 190px;
+}
+p{
+  margin-left: 150px;
+}
+.mbtn{
+  color: #fafafa ;
+  background: #8A3D4B;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 80px;
+  border: lightblue;
+}
+.cover{
+  border-radius: 100%;
+  width: 395px;
+  margin-top: 6px;
+  box-shadow:-4px 1px 24px 19px #8a3d4b;
 
 }
-.bg{
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 100vh;
-
+nav{
+  text-decoration: none;
+  color: black;
 }

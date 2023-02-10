@@ -1,15 +1,28 @@
-body{
-    background-color: blue;
+
+a{
+    text-decoration: none;
+    color: black;
 }
 a:hover{
-    text-decoration: none;
+    color: black;
 }
 li{
     list-style-type: none;
     border: 1px solid;
     border-radius: 5px;
-    background-color: rgb(223, 187, 253);
+    /* background-color: rgb(223, 187, 253); */
 }
-li:hover{
-    background-color: rgb(146, 59, 227);
+.foods{
+    justify-content: center;
 }
+.btn-edit{
+    background-color: #DCA6B5;
+}
+.btn-edit:hover{
+    background-color: #f38eab;
+    color: rgb(249, 249, 246);
+}
+.price{
+    color: #ea4b78;
+}
+

@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="p-4 ml-4">
-            <form action="{{route('foods.store')}}" method="post" class="border bg-white" >
+            <form action="{{route('foods.store')}}" method="post" class="border bg-white" enctype="multipart/form-data">
                 @csrf
 
                 <div>
@@ -27,18 +27,18 @@
                     </div>
                     @enderror
                 </div>
-                {{-- <div class="mb-3">
+                <div class="mb-3">
                     <label for="formFile" class="form-label"></label>
                     <input class="form-control" name="cover" type="file" id="formFile">
-                </div> --}}
-                <div>
+                </div>
+                {{-- <div>
                     <input type="text" name="cover" value="{{old('cover')}}" placeholder="image">
                         @error('cover')
                         <div class="text-danger ">
                             {{$message}}
                         </div>
                         @enderror
-                </div>
+                </div> --}}
                 <div>
                     <input type="text" name="price" value="{{old('price')}}" placeholder="Price">   
                         @error('price')

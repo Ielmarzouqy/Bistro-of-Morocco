@@ -18,13 +18,15 @@
                  </h1>
                 </div>
                 <div>
-                    <form action="{{route('foods.destroy', $food->id)}}" method="GET">
+                    <img src="/image/{{$food['cover']}}"   class="card-img-top">
+                </div>
+                <div>
+                    <form action="{{route('foods.destroy', $food->id)}}" method="POST">
                         @csrf
-                        {{-- @method('DELETE') --}}
-                        <button class="btn btn-danger">Delete </button>
+                        @method('DELETE')
+                        <button class="btn btn-danger">Delete</button>
                     </form>
                 </div>
-               
             </div>
         </div>
     </div>
