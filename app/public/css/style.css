@@ -25,4 +25,15 @@ li{
 .price{
     color: #ea4b78;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #ea4b78;
+}
+ .food:hover{
+    box-shadow: 2px 0 2px 2px #c2bcbe;
+    width: 330px;
+    /* border-radius: 50%; */
+} 

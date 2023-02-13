@@ -34,7 +34,7 @@
                             Are you hangry? Don't wait! <br>
                             Let's start to order now
                         </p>
-                        <a href=""class="btn d-flex me-4 justify-content-center"> <button class="mbtn ">Our Menu</button> 
+                        <a href="{{route('menu')}}"class="btn d-flex me-4 justify-content-center"> <button class="mbtn ">Our Menu</button> 
                         </a>
                     </div>
                     

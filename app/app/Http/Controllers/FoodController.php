@@ -26,6 +26,12 @@ class FoodController extends Controller
             'foods'=>Food::all()
         ]);
     }
+    public function menu()
+    {
+        return view('menu',[
+            'foods'=>Food::all()
+        ]);
+    }
 
     public function create()
     {

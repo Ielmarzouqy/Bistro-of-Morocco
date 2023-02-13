@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FoodController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,7 +27,9 @@ Route::get('/allfoods', function(){
 Auth::routes();
 
 Route::view('/addfood','addFood');
-// Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::get('/dashboard', [App\Http\Controllers\FoodController::class, 'allFoods'])->name('food.dashboard');
+
+Route::get('/menu', [App\Http\Controllers\FoodController::class, 'menu'])->name('menu');
+
 Route::resource('foods', FoodController::class);
