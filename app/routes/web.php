@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -39,3 +40,7 @@ Route::prefix('menu')->middleware(('auth'))->group(function(){
     Route::get('/menu', [App\Http\Controllers\FoodController::class, 'menu'])->name('menu');
 
 });
+// Route::get('/profile/edit_profile',[App\Http\Controller\ProfileController::class, 'edit_profile'])->name('edit_profile');
+
+Route::get('/profile/edit_profile', [ ProfileController::class, 'edit_profile']);
+Route::put('/profile/edit_profile', [ProfileController::class,'up_date_profile'])->name('up_date_profile');
