@@ -28,8 +28,14 @@ Auth::routes();
 
 Route::view('/addfood','addFood');
 
-Route::get('/dashboard', [App\Http\Controllers\FoodController::class, 'allFoods'])->name('food.dashboard');
 
-Route::get('/menu', [App\Http\Controllers\FoodController::class, 'menu'])->name('menu');
 
-Route::resource('foods', FoodController::class);
+//admin
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
+    Route::resource('foods', FoodController::class);
+    Route::get('dashboard', [App\Http\Controllers\FoodController::class, 'allFoods'])->name('food.dashboard');
+});
+Route::prefix('menu')->middleware(('auth'))->group(function(){
+    Route::get('/menu', [App\Http\Controllers\FoodController::class, 'menu'])->name('menu');
+
+});

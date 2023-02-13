@@ -16,7 +16,9 @@
                 @if (Route::has('login'))
                     <div class="nav d-flex ml-4 p-2 justify-content-center">
                         @auth
-                            <a href="{{ route('food.dashboard') }}" >Dashboard</a>
+                            {{-- <a href="{{ route('food.dashboard') }}" >Dashboard</a> --}}
+                        <a href="{{route('menu')}}"class="btn d-flex me-4 justify-content-center"> <button class="mbtn ">Our Menu</button>  </a>
+
                         @else
                             <a href="{{ route('login') }}" >Log in</a>
                             @if (Route::has('register'))
@@ -34,8 +36,6 @@
                             Are you hangry? Don't wait! <br>
                             Let's start to order now
                         </p>
-                        <a href="{{route('menu')}}"class="btn d-flex me-4 justify-content-center"> <button class="mbtn ">Our Menu</button> 
-                        </a>
                     </div>
                     
                 </div>
