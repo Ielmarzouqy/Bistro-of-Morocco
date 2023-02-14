@@ -8,7 +8,7 @@
             <div class="card">
 
                 <div class="p-2 gap-4 m-2 text-decoration-none">
-                    <a class="p-2 gap-4 text-black text-decoration-none m-2" href="">Edit profile</a>
+                    <a class="p-2 gap-4 text-black text-decoration-none m-2" href="{{route('edit_profile')}}">Edit profile</a>
                     <a class="p-2 gap-4 text-black text-decoration-none m-2" href="{{route('foods.index')}}">Foods</a>
                     <a class="p-2 gap-4 text-black text-decoration-none m-2" href="{{route('foods.create')}}">Add Food</a>
 

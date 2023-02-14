@@ -27,11 +27,6 @@
                     <label for="formFile" class="form-label"></label>
                     <input class="form-control" name="cover"  type="file" id="formFile">
                 </div>
-                {{-- <div>
-                    <input type="text" name="cover" value="{{$food->cover}}" placeholder="image">
-                        
-                       
-                </div> --}}
                 <div>
                     <input type="text" name="price" value="{{$food->price}}" placeholder="Price">   
                              

@@ -6,14 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Food; 
 class FoodController extends Controller
 {
-     public function getData(){
-        return [
-            ['id'=>1, 'name'=>'macaron', 'price'=>12],
-            ['id'=>2, 'name'=>'cake', 'price'=>50],
-            ['id'=>3, 'name'=>'coffee', 'price'=>20],
-
-        ];
-     }
     public function index()
     {
         return view('foods.index',[
@@ -40,16 +32,13 @@ class FoodController extends Controller
 
     public function store(Request $request){
 
-
         $request->validate([
             'name'=>'required',
             'cover'=>'required',
-            // 'price'=>['required','integer'],
 
         ]);
         $food = new Food();
         $food->name = strip_tags ( $request->input('name'));
-        // $food->cover =strip_tags ($request->input('cover'));
         $food->price =strip_tags ($request->input('price'));
         if($cover = $request->file('cover')){
             $dist_path = 'image/';
@@ -79,7 +68,6 @@ class FoodController extends Controller
     public function update(Request $request, $id){   
     $request->validate([
         'name'=>'required',
-        // 'cover'=>'required',
         'price'=>['required','integer'],
     ]);
 
@@ -96,8 +84,6 @@ class FoodController extends Controller
         $inp['cover']="$cover_name";
         
         $update->fill($inp);
-        // $update->save();
-
         $update->save();
         return redirect()->route('foods.index', $id);
     }

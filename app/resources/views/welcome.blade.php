@@ -16,13 +16,13 @@
                 @if (Route::has('login'))
                     <div class="nav d-flex ml-4 p-2 justify-content-center">
                         @auth
-                            {{-- <a href="{{ route('food.dashboard') }}" >Dashboard</a> --}}
+                            <a href="{{ route('food.dashboard') }}" class="btn d-flex me-4 border-2 text-white justify-content-center">Dashboard</a>
                         <a href="{{route('menu')}}"class="btn d-flex me-4 justify-content-center"> <button class="mbtn ">Our Menu</button>  </a>
 
                         @else
-                            <a href="{{ route('login') }}" >Log in</a>
+                            <a href="{{ route('login') }}" class="login btn d-flex me-4 justify-content-center">Log in</a>
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}" >Register</a>
+                                <a href="{{ route('register') }}" class="register btn d-flex me-4 justify-content-center">Register</a>
                             @endif
                         @endauth
                     </div>

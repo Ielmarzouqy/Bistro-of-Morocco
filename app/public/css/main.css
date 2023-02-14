@@ -1,16 +1,7 @@
 /* #8A3D4B */
 /* #DCA6B5 */
 /* #F9D1AC */
-/* .left-bg{
-  width: 50%;
-  height: 50%;
-  margin-left: 0;
-}
-.right-bg{
-  width: 50%;
-  height: 50ù;
-  /* margin-right: 0; */
-/* } */ 
+
 .banner{
   background-image: url(../images/left-bg.png);
   width: 500px;
@@ -54,4 +45,11 @@ p{
 nav{
   text-decoration: none;
   color: black;
+}
+.login {
+  color: #8A3D4B;
+
+}
+.register{
+  color: #8A3D4B;
 }
